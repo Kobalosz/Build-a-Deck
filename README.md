@@ -73,6 +73,12 @@ The frontend dev server proxies API calls to the backend (`proxy` is set to `htt
 
 > GitHub Pages can only host static assets. The deployed Pages build runs fully client-side and calls Scryfall directly.
 
+Update: the current GitHub Pages build is configured to call the backend hosted on Vercel:
+
+```text
+https://build-a-deck-orpin.vercel.app
+```
+
 ## Repo layout
 
 - `synergy-simulator-backend/` — Express server and simple synergy tagging

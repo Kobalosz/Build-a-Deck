@@ -37,6 +37,8 @@ jobs:
 
       - name: Build
         working-directory: synergy-simulator-frontend
+        env:
+          REACT_APP_API_BASE: https://build-a-deck-orpin.vercel.app
         run: npm run build
 
       - name: Upload artifact

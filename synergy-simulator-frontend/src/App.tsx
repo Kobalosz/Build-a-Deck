@@ -28,6 +28,19 @@ import {
   type ScryfallCard,
 } from "./lib/scryfall";
 
+function getSynergyTags(cards: ScryfallCard[]): string[] {
+  const tags = new Set<string>();
+
+  for (const card of cards) {
+    const text = getCardOracleText(card).toLowerCase();
+    if (text.includes("whenever you gain life")) {
+      tags.add("lifegain_payoff");
+    }
+  }
+
+  return Array.from(tags);
+}
+
 type ViewMode = "results" | "hand";
 
 const QUICK_QUERIES: { label: string; query: string }[] = [
@@ -71,12 +84,18 @@ export default function App() {
     setViewMode("results");
 
     try {
-      const response = await axios.get("/api/deck", {
-        params: { query },
-      });
+      const response = await axios.get(
+        "https://api.scryfall.com/cards/search",
+        {
+          params: {
+            q: query,
+            unique: "cards",
+          },
+        },
+      );
 
-      const cards: ScryfallCard[] = Array.isArray(response.data?.cards)
-        ? response.data.cards
+      const cards: ScryfallCard[] = Array.isArray(response.data?.data)
+        ? response.data.data
         : [];
 
       setDeckCards(cards);
@@ -99,38 +118,19 @@ export default function App() {
     setErrorMessage("");
 
     try {
-      type DrawCard = {
-        name: string;
-        oracle_text?: string;
-        card_faces?: { name: string; oracle_text?: string }[];
-      };
+      const pool = deckCards.slice();
+      const drawn: ScryfallCard[] = [];
 
-      // Keep the request small: /api/draw only needs oracle text (and sometimes faces).
-      const drawPayloadCards: DrawCard[] = deckCards.slice(0, 200).map((c) => ({
-        name: c.name,
-        oracle_text: c.oracle_text,
-        card_faces: Array.isArray(c.card_faces)
-          ? c.card_faces.map((f) => ({
-              name: f.name,
-              oracle_text: f.oracle_text,
-            }))
-          : undefined,
-      }));
+      for (let i = 0; i < 7; i++) {
+        const randomIndex = Math.floor(Math.random() * pool.length);
+        const [card] = pool.splice(randomIndex, 1);
+        if (card) {
+          drawn.push(card);
+        }
+      }
 
-      const response = await axios.post("/api/draw", {
-        cards: drawPayloadCards,
-      });
-
-      const cards: ScryfallCard[] = Array.isArray(response.data?.drawn_cards)
-        ? response.data.drawn_cards
-        : [];
-
-      const tags: string[] = Array.isArray(response.data?.synergy_tags)
-        ? response.data.synergy_tags
-        : [];
-
-      setDrawnCards(cards);
-      setSynergyTags(tags);
+      setDrawnCards(drawn);
+      setSynergyTags(getSynergyTags(drawn));
       setViewMode("hand");
       setBusy("idle");
     } catch (e) {
@@ -341,8 +341,8 @@ export default function App() {
 
         <footer className="mt-4 flex flex-col justify-between gap-2 text-xs text-muted-foreground sm:flex-row">
           <div>
-            Backend: <code className="text-foreground">/api/deck</code>,{" "}
-            <code className="text-foreground">/api/draw</code>
+            Data source:{" "}
+            <code className="text-foreground">api.scryfall.com</code>
           </div>
           <div>
             shadcn-style primitives + Tailwind (CRA-compatible build pipeline)

@@ -22,6 +22,20 @@ From the repo root:
 bash ./run.sh
 ```
 
+## Hosting (GitHub Pages)
+
+This repo is set up to deploy the **frontend** to GitHub Pages via GitHub Actions.
+
+The Pages URL will be:
+
+```text
+https://kobalosz.github.io/Build-a-Deck/
+```
+
+In the repo settings, ensure:
+
+- **Settings → Pages → Build and deployment → Source = GitHub Actions**
+
 This will:
 
 1. Install dependencies in both backend + frontend
@@ -56,6 +70,8 @@ The frontend dev server proxies API calls to the backend (`proxy` is set to `htt
 - `POST /api/draw` body `{ cards: Card[] }` -> `{ drawn_cards: Card[], synergy_tags: string[] }`
 
 `/api/deck` is a thin wrapper around the Scryfall search endpoint; `/api/draw` draws 7 cards from the provided list and returns detected synergy tags.
+
+> GitHub Pages can only host static assets. The deployed Pages build runs fully client-side and calls Scryfall directly.
 
 ## Repo layout
 

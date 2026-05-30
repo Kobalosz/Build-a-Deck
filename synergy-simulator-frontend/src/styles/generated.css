@@ -1,0 +1,490 @@
+/*! tailwindcss v4.3.0 | MIT License | https://tailwindcss.com */
+@layer properties;
+.pointer-events-none {
+  pointer-events: none;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.top-\[50\%\] {
+  top: 50%;
+}
+.left-\[50\%\] {
+  left: 50%;
+}
+.-z-10 {
+  z-index: calc(10 * -1);
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.aspect-\[63\/44\] {
+  aspect-ratio: 63/44;
+}
+.h-auto {
+  height: auto;
+}
+.h-full {
+  height: 100%;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-\[120px\] {
+  width: 120px;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-\[70ch\] {
+  max-width: 70ch;
+}
+.translate-x-\[-50\%\] {
+  --tw-translate-x: -50%;
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.translate-y-\[-50\%\] {
+  --tw-translate-y: -50%;
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.grid-flow-col {
+  grid-auto-flow: column;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.rounded-full {
+  border-radius: calc(infinity * 1px);
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-dashed {
+  --tw-border-style: dashed;
+  border-style: dashed;
+}
+.border-transparent {
+  border-color: transparent;
+}
+.bg-gradient-to-br {
+  --tw-gradient-position: to bottom right in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.bg-gradient-to-t {
+  --tw-gradient-position: to top in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.bg-\[radial-gradient\(1100px_700px_at_15\%_0\%\,hsl\(var\(--primary\)\)\/0\.22\,transparent_60\%\)\,radial-gradient\(900px_700px_at_85\%_10\%\,hsl\(var\(--ring\)\)\/0\.18\,transparent_62\%\)\,radial-gradient\(1000px_800px_at_65\%_100\%\,hsl\(0_84\%_60\%\)\/0\.12\,transparent_62\%\)\] {
+  background-image: radial-gradient(1100px 700px at 15% 0%,hsl(var(--primary))/0.22,transparent 60%),radial-gradient(900px 700px at 85% 10%,hsl(var(--ring))/0.18,transparent 62%),radial-gradient(1000px 800px at 65% 100%,hsl(0 84% 60%)/0.12,transparent 62%);
+}
+.via-transparent {
+  --tw-gradient-via: transparent;
+  --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-via-stops);
+}
+.to-transparent {
+  --tw-gradient-to: transparent;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.object-cover {
+  object-fit: cover;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.leading-none {
+  --tw-leading: 1;
+  line-height: 1;
+}
+.tracking-\[0\.22em\] {
+  --tw-tracking: 0.22em;
+  letter-spacing: 0.22em;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.opacity-70 {
+  opacity: 70%;
+}
+.ring {
+  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.outline {
+  outline-style: var(--tw-outline-style);
+  outline-width: 1px;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
+.duration-200 {
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+}
+.file\:border-0 {
+  &::file-selector-button {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
+}
+.file\:bg-transparent {
+  &::file-selector-button {
+    background-color: transparent;
+  }
+}
+.hover\:opacity-100 {
+  &:hover {
+    @media (hover: hover) {
+      opacity: 100%;
+    }
+  }
+}
+.focus\:ring-2 {
+  &:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+}
+.focus\:ring-offset-2 {
+  &:focus {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  }
+}
+.focus\:outline-none {
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
+.focus-visible\:ring-2 {
+  &:focus-visible {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+}
+.focus-visible\:ring-offset-2 {
+  &:focus-visible {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  }
+}
+.focus-visible\:outline-none {
+  &:focus-visible {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
+.disabled\:pointer-events-none {
+  &:disabled {
+    pointer-events: none;
+  }
+}
+.disabled\:cursor-not-allowed {
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.disabled\:opacity-50 {
+  &:disabled {
+    opacity: 50%;
+  }
+}
+.\[\&_svg\]\:pointer-events-none {
+  & svg {
+    pointer-events: none;
+  }
+}
+.\[\&_svg\]\:shrink-0 {
+  & svg {
+    flex-shrink: 0;
+  }
+}
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 263.4 70% 50.4%;
+    --radius: 0.75rem;
+  }
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
+      --tw-duration: initial;
+    }
+  }
+}
